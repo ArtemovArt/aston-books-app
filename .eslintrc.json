@@ -20,13 +20,14 @@
         "jsx-quotes": [2, "prefer-double"],
         
         "no-console":"warn",
-        "curly": ["error", "all"],
+        "curly": "error",
         "import/prefer-default-export": "off",
         "prettier/prettier": ["error", {
             "endOfLine": "auto"
           }],
-        "react/prop-types": 0 
-
+        "react/prop-types": 0,
+        "no-unused-expressions": "error",
+        "react/jsx-no-useless-fragment": ["error", { "allowExpressions": true }]
     }
     }
 
