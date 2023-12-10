@@ -147,11 +147,19 @@ dist
 .env.development.local
 .env.test.local
 .env.production.local
-/public
+public/
 src/App.test.js
 src/reportWebVitals.js
 src/setupTests.js
 src/App.test.js
+package-lock.json
+package.json
+README.md
+index.js
+index.css
+src/images
+.prettierrc.yml
+eslintrc.json
 
 npm-debug.log*
 yarn-debug.log*
