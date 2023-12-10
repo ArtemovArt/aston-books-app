@@ -19,8 +19,8 @@
     align-items: center;
     border-radius: 14px;
     margin-top: 24px;
-    width: 250px;
-    height: 350px;
+    width: 150px;
+    height: 250px;
   }
 
   .content {
@@ -28,6 +28,7 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    height: 50%;
 
     padding: 30px;
     gap: 5px;

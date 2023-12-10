@@ -1,14 +1,22 @@
 import React from "react";
 
+import { useGetBooksQuery } from "../../api/booksApi";
 import Card from "../Card/Card";
 import Header from "../Header/Header";
 import "./MainPage.scss";
 
 function MainPage() {
-  const cardsData = Array(9).fill({
-    author: "Михаил Булгаков",
-    name: "Мастер и Маргарита",
-  });
+  const { data, error, isLoading } = useGetBooksQuery();
+
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  console.log(data);
 
   return (
     <div>
@@ -16,8 +24,14 @@ function MainPage() {
       <div className="wrapper">
         <div className="content">
           <div className="cards-field">
-            {cardsData.map((book) => (
-              <Card author={book.author} name={book.name} />
+            {data.map((item) => (
+              <Card
+                key={item.id}
+                id={item.id}
+                author={item.author}
+                title={item.title}
+                cover={item.cover}
+              />
             ))}
           </div>
         </div>
