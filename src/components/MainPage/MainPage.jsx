@@ -3,17 +3,18 @@ import React from "react";
 import { useGetBooksQuery } from "../../api/booksApi";
 import Card from "../Card/Card";
 import Header from "../Header/Header";
+import Loader from "../Loader/Loader";
 import "./MainPage.scss";
 
 function MainPage() {
   const { data, error, isLoading } = useGetBooksQuery();
 
   if (isLoading) {
-    return <div>Loading...</div>; // TODO: Само собой добавлю сюда компонент Lodaer`а, сейчас решил не раздувать ПР еще больше
+    return <Loader />;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>; // TODO: Если буду успевать, для отображения ошибки тоже сделаю что-то отдельное, пока что
+    return <div>Error: {error.message}</div>;
   }
 
   return (
