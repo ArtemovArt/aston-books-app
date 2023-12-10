@@ -16,8 +16,6 @@ function MainPage() {
     return <div>Error: {error.message}</div>;
   }
 
-  console.log(data);
-
   return (
     <div>
       <Header />
