@@ -13,7 +13,7 @@ function MainPage() {
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>; // TODO: Если буду успевать, для отображения ошибки тоже сделаю что-то отдельное, пока что так
+    return <div>Error: {error.message}</div>; // TODO: Если буду успевать, для отображения ошибки тоже сделаю что-то отдельное, пока что
   }
 
   return (
