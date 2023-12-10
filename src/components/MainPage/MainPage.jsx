@@ -9,17 +9,18 @@ function MainPage() {
   const { data, error, isLoading } = useGetBooksQuery();
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div>Loading...</div>; // TODO: Само собой добавлю сюда компонент Lodaer`а, сейчас решил не раздувать ПР еще больше
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div>Error: {error.message}</div>; // TODO: Если буду успевать, для отображения ошибки тоже сделаю что-то отдельное, пока что так
   }
 
   return (
     <div>
       <Header />
       <div className="wrapper">
+        {/* TODO: Возможно, в дальнейшем стоит добавить отдельный глупый компонент List как контейнер для всех карточек книг, пока что оставил так */}
         <div className="content">
           <div className="cards-field">
             {data.map((item) => (
