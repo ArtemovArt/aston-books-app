@@ -14,7 +14,7 @@ function MainPage() {
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div>Возникла ошибка: {error.message}</div>;
   }
 
   return (
